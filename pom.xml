@@ -92,6 +92,11 @@
                    <artifactId>org.wso2.maven.core</artifactId>
                    <version>${org.wso2.maven.core.version}</version>
                </dependency>
+               <dependency>
+	           <groupId>javax.activation</groupId>
+		   <artifactId>activation</artifactId>
+		   <version>${version.javax.xml.activation}</version>
+	       </dependency>
            </dependencies>
        </dependencyManagement>
 	<properties>
@@ -156,6 +161,7 @@
 		<org.wso2.maven.utils.version>2.2.1-SNAPSHOT</org.wso2.maven.utils.version>
 		<org.wso2.maven.registry.version>2.1.0</org.wso2.maven.registry.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.javax.xml.activation>1.1</version.javax.xml.activation>
 	</properties>
 
 </project>

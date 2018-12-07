@@ -59,6 +59,7 @@
 										  /> <pathelement location="${settings.localRepository}/org/apache/ws/commons/axiom/axiom-api/1.2.13/axiom-api-1.2.13.jar" / -->
 									<pathelement location="${settings.localRepository}/org/apache/ws/commons/axiom/wso2/axiom/1.2.11.wso2v4/axiom-1.2.11.wso2v4.jar" />
 									<pathelement location="${settings.localRepository}/org/apache/ws/commons/schema/wso2/XmlSchema/1.4.7.wso2v1/XmlSchema-1.4.7.wso2v1.jar" />
+									<pathelement location="${settings.localRepository}/javax/activation/activation/${version.javax.xml.activation}/activation-${version.javax.xml.activation}.jar" />
 								</path>
 								<java classname="org.apache.axis2.wsdl.WSDL2Java" fork="true">
 									<arg line="-uri src/main/resources/ApplicationAdmin.wsdl -u -uw -o ${project.build.directory}/generated-sources -p org.wso2.carbon.stub                                      -ns2p http://mgt.application.carbon.wso2.org=org.wso2.carbon.application.mgt.stub,http://mgt.application.carbon.wso2.org/xsd=org.wso2.carbon.application.mgt.stub.types.carbon,http://org.apache.axis2/xsd=org.wso2.carbon.application.mgt.stub.types.axis2" />
@@ -102,8 +103,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -307,6 +308,10 @@
 					<artifactId>*</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+        	<dependency>
+	   		<groupId>javax.activation</groupId>
+	    		<artifactId>activation</artifactId>
 		</dependency>
 	</dependencies>
 </project>
